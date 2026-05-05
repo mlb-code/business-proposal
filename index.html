@@ -657,6 +657,231 @@ footer a { color: var(--text-muted); }
 .notes ul li::before {
     content: "—"; position: absolute; right: 0; color: var(--accent);
 }
+
+/* === MOBILE OPTIMIZATIONS (≤700px) === */
+@media (max-width: 700px) {
+    body { line-height: 1.7; }
+
+    /* Tighter container */
+    .container { padding: 0 18px; }
+
+    /* HERO — better typography & spacing */
+    .hero {
+        padding: 48px 0 64px;
+    }
+    .hero::before {
+        top: -150px; right: -150px;
+        width: 380px; height: 380px;
+    }
+    .hero .topline {
+        margin-bottom: 36px;
+        align-items: flex-start;
+    }
+    .hero h1 {
+        font-size: 2.4rem;
+        line-height: 1.05;
+        margin-bottom: 22px;
+    }
+    .hero .lead {
+        font-size: 1rem;
+        line-height: 1.75;
+        margin-bottom: 32px;
+    }
+    .meta {
+        font-size: 0.7rem;
+        line-height: 1.7;
+    }
+    .brand {
+        font-size: 1.05rem;
+    }
+    .kicker {
+        font-size: 0.65rem;
+        margin-bottom: 20px;
+    }
+    .kicker::before { width: 20px; }
+
+    /* Hero summary cards */
+    .hero-summary {
+        margin-top: 36px;
+        gap: 12px;
+    }
+    .hero-summary .card {
+        padding: 20px 22px;
+    }
+    .hero-summary .card .title {
+        font-size: 1.05rem;
+        margin-bottom: 6px;
+    }
+    .hero-summary .card .desc {
+        font-size: 0.92rem;
+        line-height: 1.65;
+    }
+
+    /* SECTIONS — tighter padding */
+    .section {
+        padding: 56px 0;
+    }
+    .section-head {
+        margin-bottom: 32px;
+        gap: 12px;
+    }
+    .section-head h2 {
+        font-size: 1.7rem;
+        line-height: 1.15;
+    }
+    .section-head .num-badge { font-size: 0.65rem; }
+
+    /* MODULE — much tighter on mobile */
+    .module-head {
+        padding: 22px 20px;
+        gap: 16px;
+    }
+    .module-head .badge {
+        width: 44px; height: 44px;
+        font-size: 1rem;
+        border-radius: 10px;
+    }
+    .module-head h3 {
+        font-size: 1.3rem;
+        line-height: 1.2;
+        margin-bottom: 6px;
+    }
+    .module-head .subtitle {
+        font-size: 0.94rem;
+        line-height: 1.7;
+    }
+    /* Price card becomes full width on mobile, with top border */
+    .module-head .price {
+        width: 100%;
+        margin-right: 0;
+        text-align: right;
+        padding-top: 16px;
+        border-top: 1px solid var(--line);
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+    .module-head .price .label {
+        order: 1;
+        margin-bottom: 0;
+    }
+    .module-head .price .amount {
+        order: 2;
+        font-size: 1.4rem;
+    }
+    .module-head .price .unit {
+        order: 3;
+        flex-basis: 100%;
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
+
+    .module-body {
+        padding: 24px 20px;
+    }
+    .module-body h4 {
+        font-size: 0.72rem;
+        margin-bottom: 14px;
+        margin-top: 24px;
+    }
+
+    /* Sessions */
+    .sessions { gap: 12px; }
+    .session {
+        padding: 18px 20px;
+    }
+    .session .title {
+        font-size: 1.02rem;
+        margin-bottom: 6px;
+    }
+    .session .desc {
+        font-size: 0.92rem;
+        line-height: 1.7;
+    }
+
+    /* Bullet list — better spacing */
+    .bullet-list { gap: 14px; }
+    .bullet-list li {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        padding-right: 22px;
+    }
+    .bullet-list li::before {
+        top: 0.65em;
+        width: 7px; height: 7px;
+    }
+
+    /* Tiers and banks - tighter */
+    .tier, .bank {
+        padding: 22px 20px;
+    }
+    .tier .tier-price, .bank .bank-hours {
+        font-size: 1.4rem;
+    }
+    .tier-features li {
+        font-size: 0.88rem;
+        line-height: 1.6;
+    }
+
+    /* WHY cards */
+    .why-card { padding: 24px 22px; }
+    .why-card h4 { font-size: 1.02rem; }
+    .why-card p { font-size: 0.92rem; line-height: 1.7; }
+
+    /* Notes — better readability */
+    .notes {
+        font-size: 0.88rem;
+        padding: 20px 22px;
+        line-height: 1.75;
+    }
+
+    /* VAT banner */
+    .vat-banner {
+        padding: 14px 18px;
+        font-size: 0.92rem;
+        line-height: 1.65;
+        gap: 12px;
+        align-items: flex-start;
+    }
+    .vat-banner .icon {
+        width: 26px; height: 26px;
+        font-size: 0.85rem;
+        margin-top: 2px;
+    }
+
+    /* CTA */
+    .cta {
+        padding: 64px 0;
+    }
+    .cta h2 {
+        font-size: 1.9rem;
+        line-height: 1.15;
+    }
+    .cta p {
+        font-size: 1rem;
+    }
+    .btn {
+        padding: 14px 26px;
+        font-size: 0.95rem;
+        width: 100%;
+        justify-content: center;
+    }
+    .cta-buttons { gap: 10px; }
+
+    /* Footer */
+    footer { padding: 32px 0; font-size: 0.78rem; }
+    footer .row { gap: 12px; text-align: center; flex-direction: column; }
+}
+
+/* === EXTRA SMALL (≤380px) === */
+@media (max-width: 380px) {
+    .container { padding: 0 16px; }
+    .hero h1 { font-size: 2.1rem; }
+    .module-head h3 { font-size: 1.2rem; }
+    .section-head h2 { font-size: 1.5rem; }
+}
 </style>
 </head>
 <body>
